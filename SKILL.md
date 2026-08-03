@@ -2,12 +2,10 @@
 name: humanizer
 version: 2.7.0
 description: |
-  Remove signs of AI-generated writing from text. Use when editing or reviewing
-  text to make it sound more natural and human-written. Based on Wikipedia's
-  comprehensive "Signs of AI writing" guide. Detects and fixes patterns including:
-  inflated symbolism, promotional language, superficial -ing analyses, vague
-  attributions, em dash overuse, rule of three, AI vocabulary words, passive
-  voice, negative parallelisms, and filler phrases.
+  Remove AI-writing tells so text reads as human. Run on anything shareable: email, document,
+  wiki page, artifact, message, published page. Not for plain chat replies. Fixes em dashes,
+  rule of three, inflated symbolism, promotional language, vague attributions, negative
+  parallelisms, passive voice, and filler.
 license: MIT
 compatibility: claude-code opencode
 allowed-tools:
@@ -165,6 +163,25 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > Traffic congestion increased after 2015 when three new IT parks opened. The municipal corporation began a stormwater drainage project in 2022 to address recurring floods.
 
 
+### 6b. Throat-Clearing Openers
+
+**Words to watch:** The honest answer is..., The honest truth..., Worth naming, because..., Worth saying plainly..., It's worth noting that..., The useful part is..., The thing that matters here..., Two things worth saying..., That is the whole problem in one view, Here's the thing, What's interesting is..., Let me be clear
+
+**Problem:** A sentence that announces the sentence instead of being it. The writer clears their throat, flags that something important is coming, rates its own honesty or usefulness, and only then says the thing. It reads as performed candor. Every one of these can be deleted with no loss: the content after the colon was always the content.
+
+The tell is self-assessment. Real writing doesn't tell the reader that what follows is honest, useful, or worth naming; it just says it and lets the reader judge. "The honest answer" implies the surrounding text was something else.
+
+Especially bad in action documents (status reports, trackers, decision memos) read by busy people scanning for what changed. Setup phrasing costs the reader a line before every payload.
+
+**Before:**
+> The honest answer to "where does this all come back together" is the section below. Worth naming, because it changes the shape of the board rather than any one row: the life-cycle work maps four arenas. Two things worth saying about that.
+
+**After:**
+> The life-cycle work maps four arenas.
+
+**Test:** delete the clause before the comma or colon. If the sentence still works, it was throat-clearing.
+
+
 ## LANGUAGE AND GRAMMAR PATTERNS
 
 ### 7. Overused "AI Vocabulary" Words
@@ -208,6 +225,14 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 
 **After:**
 > The options come from the selected item without forcing the user to guess.
+
+**The antithesis-as-label variant, and the density rule.** The same tell shows up as a punchy "X, not Y." label or a "This, not that. Terse statement." beat: *"Transformation, not a do-over."* *"Integration, not architecture."* *"It's the difference between transferring a capability and renaming a dependency."* One deliberate instance in a whole document is a rhetorical device and fine. The tell is **density**: when the construction recurs every few paragraphs it reads as machine cadence, not a human making a point once. Flag repetition, not the isolated use, and when you cut, move the contrast into the sentence body or drop the negated half entirely.
+
+**Before (repeated antithesis):**
+> The measurement is instrumental; the discernment is the point. It's a transformation, not a do-over. More time is how the transfer lands; less is how it fails.
+
+**After:**
+> The measurement serves the discernment, which is the actual point. The data and the design carry forward, so this is a transformation. And more coaching time is what makes the transfer land.
 
 
 ### 10. Rule of Three Overuse
@@ -315,9 +340,7 @@ Before returning the final rewrite, scan it for `—` and `–`. Any hit means t
 **Problem:** AI chatbots often decorate headings or bullet points with emojis.
 
 **Before:**
-> 🚀 **Launch Phase:** The product launches in Q3
-> 💡 **Key Insight:** Users prefer simplicity
-> ✅ **Next Steps:** Schedule follow-up meeting
+> 🚀 **Launch Phase:** The product launches in Q3 💡 **Key Insight:** Users prefer simplicity ✅ **Next Steps:** Schedule follow-up meeting
 
 **After:**
 > The product launches in Q3. User research showed a preference for simplicity. Next step: schedule a follow-up meeting.
