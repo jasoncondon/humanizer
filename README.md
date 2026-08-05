@@ -110,7 +110,7 @@ Rewrites follow a no-fabrication rule: they never add facts, names, dates, or ci
 
 > "LLMs use statistical algorithms to guess what should come next. The result tends toward the most statistically likely result that applies to the widest variety of cases."
 
-## 33 Patterns Detected (with Before/After Examples)
+## 35 Patterns Detected (with Before/After Examples)
 
 ### Content Patterns
 
@@ -153,6 +153,8 @@ Rewrites follow a no-fabrication rule: they never add facts, names, dates, or ci
 | 31 | **Manufactured punchlines / staccato drama** | "It had no preference. No prior. No nostalgia." | Use varied sentence lengths and concrete claims |
 | 32 | **Aphorism formulas** | "Symmetry is the language of trust" | Replace the formula with the actual claim |
 | 33 | **Conversational rhetorical openers** | "Honestly? It depends..." | Remove the fake-candid setup |
+| 34 | **Process narration / provenance storytelling** | "Neither of us checked, and it turns out..." | State the claim; delete the how-we-got-here clause |
+| 35 | **Curiosity-gap headings** | "Settled by accident" | Name the finding or the question in the heading |
 
 ### Communication Patterns
 
@@ -207,6 +209,7 @@ Rewrites follow a no-fabrication rule: they never add facts, names, dates, or ci
 
 ## Version History
 
+- **2.10.0** - Added patterns 34 (process narration and provenance storytelling) and 35 (curiosity-gap headings), and amended the §9 density rule with positional weight so a single clever antithesis in a heading is flagged even when the document is otherwise clean. Fixes a repeated failure where documents narrated how findings were reached and used reveal-style headings that defeated scanning.
 - **2.9.1** - Improved distribution and portability: removed nonportable frontmatter and tool preapprovals, made global installation the documented default, added package validation, and removed the duplicated long-form example from the runtime prompt. No change to the 33 patterns.
 - **2.9.0** - Added a no-fabrication rule: rewrites may not invent facts, names, dates, or citations not present in the source, and every example that modeled invented specifics was re-cut to use only source information (fixes #187). Replaced paragraph-count parity with an information-over-shape rule, made a user's voice sample outrank the em dash ban, and added invocation modes (pasted text / file / embedded). No change to the 33 patterns.
 - **2.8.3** - Moved the skill version from the unsupported top-level frontmatter key to `metadata.version` for Agent Skills and Claude compatibility. No change to the 33 patterns.

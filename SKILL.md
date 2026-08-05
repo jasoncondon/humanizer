@@ -7,7 +7,7 @@ description: |
   parallelisms, passive voice, and filler.
 license: MIT
 metadata:
-  version: "2.9.1"
+  version: "2.10.0"
 ---
 
 # Humanizer: Remove AI Writing Patterns
@@ -156,6 +156,8 @@ Especially bad in action documents (status reports, trackers, decision memos) re
 > The options come from the selected item without forcing the user to guess.
 
 **The antithesis-as-label variant, and the density rule.** The same tell shows up as a punchy "X, not Y." label or a "This, not that. Terse statement." beat: *"Transformation, not a do-over."* *"Integration, not architecture."* *"It's the difference between transferring a capability and renaming a dependency."* One deliberate instance in a whole document is a rhetorical device and fine. The tell is **density**: when the construction recurs every few paragraphs it reads as machine cadence, not a human making a point once. Flag repetition, not the isolated use, and when you cut, move the contrast into the sentence body or drop the negated half entirely.
+
+**Positional weight: density is not the only test.** Headings, titles, section labels, and list labels are high-salience surfaces, read in the nav pane, the table of contents, and by every scanner who reads nothing else. **On those surfaces one instance is one too many**, regardless of how rarely the construction appears elsewhere. The standard remedy of moving the contrast into the sentence body does not work for a heading, which has no body. **Default there: drop the negated half and state the denotative version.** "Count congregations, not signatures" becomes "The unit we count."
 
 **Before (repeated antithesis):**
 > The measurement is instrumental; the discernment is the point. It's a transformation, not a do-over. More time is how the transfer lands; less is how it fails.
@@ -377,6 +379,24 @@ Before returning the final rewrite, scan it for `—` and `–`. Any hit means t
 > Is it worth the price? Honestly? It depends on how often you'll use it.
 **After:**
 > Whether it's worth the price depends on how often you'll use it.
+
+### 34. Process Narration and Provenance Storytelling
+
+**Phrases to watch:** Neither of us checked, You said it better than I would, I sent you X after our call, One probe answers it, It turns out, What I found was, After digging into this, You offered and it's the one thing effort can't substitute for.
+**Problem:** The writer narrates how a claim was arrived at, who said it first, what it cost to verify, or what they chose to keep, instead of stating the claim. It reads as showing work to prove diligence, and it inflates a document the reader wants to scan. **Test: delete the clause. If the fact survives intact, it was narration.**
+**Before:**
+> Neither of us checked, and it turns out we were both wrong: after digging into the route table, I found there's no report namespace of any kind.
+**After:**
+> The route table has no report namespace of any kind.
+
+### 35. Curiosity-Gap Headings
+
+**Phrases to watch:** headings containing "and one thing to confirm," "what we learned," "the one that matters," "settled by accident," "half landed"; any heading whose colon introduces a reveal rather than a qualifier.
+**Problem:** The heading promises a payoff instead of naming the content. It is clickbait grammar applied to a document, and it defeats the surfaces headings exist to serve: scanning, the nav pane, the table of contents. **A heading states the finding or the question.**
+**Before:**
+> ## Your Conferences fix: half landed, and the half we need is the missing one
+**After:**
+> ## Conferences: terms exposed, per-user assignment not
 
 ## DETECTION GUIDANCE
 
