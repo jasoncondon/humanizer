@@ -1,6 +1,6 @@
 ---
 name: humanizer
-description: >
+description: |
   Rewrite AI-sounding text so it reads like the writer without changing what it says. Run on anything shareable: email, document, wiki page, artifact, message, published page. Not for plain chat replies. Fixes not-X-but-Y contrasts, one-line closers, staged openers, forced triads, dashes, inflated claims, sales language, stock AI words, bold labels, and filler.
 license: MIT
 metadata:
